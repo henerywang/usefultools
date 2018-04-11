@@ -38,9 +38,12 @@
 * chcon -t samba_share_t samba
 * systemctl restart smb nmb
 
-
 ## centos sshd install
 * yum install openssh*
 * systemctl enable sshd 
 * systemctl start sshd
 * service firewalld stop
+
+## tar.gz |tar.bz2
+* tar -xzvf xxx.tar.gz
+* tar -xjvf xxx.tar.bz2
