@@ -26,6 +26,9 @@ int    *q = &n;
 > strlen(str3)=5  
 > sizeof(p1)=4  
 > strlen(p1)=5  
+> sizeof(p2)=8  
+> sizeof(n)=4  
+> sizeof(q)=4  
 
 
 
