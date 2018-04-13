@@ -17,6 +17,16 @@ char   *p1 = "Hello";
 char  *p2[]={"hello","world"}; 
 int     n = 10;
 int    *q = &n;
+struct test1{
+    int a;
+    char b;
+    short c;
+};
+struct test3{
+    char b;
+    int a;
+    short c;
+}
 ```
 > sizeof(str1)=6 自动加'/0'  
 > strlen(str1)=5 不会加上'/0'的长度  
@@ -29,6 +39,7 @@ int    *q = &n;
 > sizeof(p2)=8  
 > sizeof(n)=4  
 > sizeof(q)=4  
-
+> sizeof(struct test1)=8  
+> sizeof(struct test2)=12  边界对齐的原因，一定要注意
 
 
