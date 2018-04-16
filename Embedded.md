@@ -32,8 +32,8 @@ struct test3{
 > strlen(str1)=5 不会加上'/0'的长度  
 > sizeof(str2)=5  
 > strlen(str2)=? 一直到出现结束符'/0'的地址位置  
-> sizeof(str3)=6  
-> strlen(str3)=5  
+> sizeof(str3)=6  
+> strlen(str3)=5  
 > sizeof(p1)=4  
 > strlen(p1)=5  
 > sizeof(p2)=8  
