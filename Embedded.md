@@ -37,9 +37,9 @@ struct test3{
 > sizeof(p1)=4  
 > strlen(p1)=5  
 > sizeof(p2)=8  
-> sizeof(n)=4  
-> sizeof(q)=4  
-> sizeof(struct test1)=8  
-> sizeof(struct test2)=12  边界对齐的原因，一定要注意
+> sizeof(n)=4  
+> sizeof(q)=4  
+> sizeof(struct test1)=8  
+> sizeof(struct test2)=12  边界对齐的原因，一定要注意 
 
 
