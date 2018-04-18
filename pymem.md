@@ -1,4 +1,4 @@
-## 设置selenium各种webdriver设置useragent
+## selenium各种webdriver设置useragent
 ```python
 # @firefox
 from selenium import webdriver
@@ -18,4 +18,16 @@ dcap["phantomjs.page.settings.userAgent"] = (
             )
 browser = webdriver.PhantomJS(desired_capabilities=dcap)            
 
+```
+
+## selenium获取cookie
+```python
+from selenium import webdriver
+browser=webdriver.Firefox()
+browser.get("xxx") #要登陆页面
+sleep(100) #这个时间自己去手动登陆
+cookie={}
+for elem in browser.get_cookies():
+    cookie[elem['name']] = elem['value']
+print(json.dumps(cookie)) #字典转字符串
 ```
