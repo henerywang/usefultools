@@ -33,4 +33,4 @@ print(json.dumps(cookie)) #字典转字符串
 ```
 
 ## 计算list中相同字串的个数
-`''.join(list).count(sameStr)`python
+```''.join(list).count(sameStr)```python
