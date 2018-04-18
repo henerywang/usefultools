@@ -31,3 +31,6 @@ for elem in browser.get_cookies():
     cookie[elem['name']] = elem['value']
 print(json.dumps(cookie)) #字典转字符串
 ```
+
+## 计算list中相同字串的个数
+`''.join(list).count(sameStr)`python
