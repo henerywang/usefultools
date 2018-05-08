@@ -90,7 +90,8 @@ clean:
         $(Q)if [ -f $(MUDP_BUILD_DIR)/$(RELATIVE_PATH)/$(MODULE) ]; then make -C $(MUDP_BUILD_DIR)/$(RELATIVE_PATH)/$(MODULE) uninstall ; fi
         rm -rf $(MUDP_BUILD_DIR)/$(RELATIVE_PATH)/$(MODULE)
 ```    
-### 1.1.2 功能选项
+### 1.1.2 内核选项
+![kernel](https://github.com/henerywang/usefultools/blob/master/kernel.png)  
 
 ## 1.2使用说明
 编译完成以后相关的文件都放在/usr/local目录下
