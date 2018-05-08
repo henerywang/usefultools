@@ -126,4 +126,8 @@ IPSec秘钥文件/usr/local/etc/ipsec.secrets
 
 ## 1.3VPN隧道测试
 
+### vpn server
+![server](https://github.com/henerywang/usefultools/blob/master/server.png)  
 
+### vpn client
+![client](https://github.com/henerywang/usefultools/blob/master/client.png)  
