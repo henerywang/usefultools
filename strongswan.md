@@ -6,7 +6,7 @@ Strongswan基于开源软件包strongswan-5.6.2.tar.gz，由strongswan的官方�
 进入mu/component/internet,添加vpn目录，把strongswan.tar.gz放到implement目录下
 * 配置
 vi makefile 主要完成如下功能:  
-``
+```
 prepare:
         $(shell [ -d $(MUDP_BUILD_DIR)/$(RELATIVE_PATH) ] || mkdir -p $(MUDP_BUILD_DIR)/$(RELATIVE_PATH))
         tar -xzvf $(MODULE).tar.gz -C  $(MUDP_BUILD_DIR)/$(RELATIVE_PATH)
@@ -89,7 +89,7 @@ clean:
         #make -C $(MUDP_BUILD_DIR)/$(RELATIVE_PATH)/$(MODULE) uninstall
         $(Q)if [ -f $(MUDP_BUILD_DIR)/$(RELATIVE_PATH)/$(MODULE) ]; then make -C $(MUDP_BUILD_DIR)/$(RELATIVE_PATH)/$(MODULE) uninstall ; fi
         rm -rf $(MUDP_BUILD_DIR)/$(RELATIVE_PATH)/$(MODULE)
-``        
+```    
 ### 1.1.2 功能选项
 
 ## 1.2使用说明
