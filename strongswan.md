@@ -5,8 +5,8 @@ Strongswan基于开源软件包strongswan-5.6.2.tar.gz，由strongswan的官方�
 * 装备  
 进入mu/component/internet,添加vpn目录，把strongswan.tar.gz放到implement目录下
 * 配置
-vi makefile 主要完成如下功能： 
-··
+vi makefile 主要完成如下功能:  
+``
 prepare:
         $(shell [ -d $(MUDP_BUILD_DIR)/$(RELATIVE_PATH) ] || mkdir -p $(MUDP_BUILD_DIR)/$(RELATIVE_PATH))
         tar -xzvf $(MODULE).tar.gz -C  $(MUDP_BUILD_DIR)/$(RELATIVE_PATH)
@@ -89,6 +89,40 @@ clean:
         #make -C $(MUDP_BUILD_DIR)/$(RELATIVE_PATH)/$(MODULE) uninstall
         $(Q)if [ -f $(MUDP_BUILD_DIR)/$(RELATIVE_PATH)/$(MODULE) ]; then make -C $(MUDP_BUILD_DIR)/$(RELATIVE_PATH)/$(MODULE) uninstall ; fi
         rm -rf $(MUDP_BUILD_DIR)/$(RELATIVE_PATH)/$(MODULE)
-··
+``        
+### 1.1.2 功能选项
+
+## 1.2使用说明
+编译完成以后相关的文件都放在/usr/local目录下
+
+### 1.2.1执行脚本
+主要的命令：
+Ipsec start 启动IPSec的IKE协商；
+Ipsec stop关闭IPSec隧道
+Ipsec restart关闭IPSec隧道，并启动IPSec的IKE协商
+Ipsec status、ipsec statusall 查看IKE、IPSec隧道建立情况。
+
+### 1.2.2配置文件
+IPSec配置文件/usr/local/etc/ipsec.conf 
+主要配置：
+authby=xauthpsk  IKE的认证方式
+right=20.0.0.99  服务器的公网IP地址
+rightsubnet=122.1.1.20/32 服务器的内外IP地址
+
+IPSec秘钥文件/usr/local/etc/ipsec.secrets
+配置psk、auth的认证秘钥
+
+/usr/local/etc下的其他文件尚未使用。
+
+### 1.2.3执行脚本
+/usr/local/libexec/ipsec/_updown  
+在IPSec隧道建立、断开会调用这个脚本，我们就可以在这个脚本中增加特色修改。
+例如IPSec的IKE建立成功后会运行“up-client”，在case up-client初增加消息通告。
+注意IKE第一、第二阶段协商时均会发up-client，目前我想到的区分方式可以用ip status中的信息来判断当前处于哪个阶段。
+
+### 1.2.4库文件
+/usr/local/lib/ipsec 需要的各种库文件。
+
+## 1.3VPN隧道测试
 
 
