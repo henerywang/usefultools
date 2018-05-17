@@ -20,4 +20,5 @@
 3.烧录image到burn addr中  
 NOTE：由于我们image由几个部门组成，所以每个部分都用相应的头，所以每个部分都会烧录到kernel中.config配置的offset。不过这些都不重要，只要保证linux的offset和ubootload中相同就可以了，因为bootload中只做了linux image这个头的验证。  
 
+## mtd parts
 
