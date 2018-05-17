@@ -4,9 +4,9 @@
 ![flash](https://github.com/henerywang/usefultools/blob/master/realtek/flash.png?raw=true)
 
 ## bootload启动流程
-1.检查image的头，从flash中拷贝image的头到sdram，检查checksum。rtk_check_bank_image()  
-2.如果有做dual_image,会中band2_offset中读取image头，然后完成步骤一  
-3.验证成功后跳到sdram中linux的位置，启动kernel  
+1. 检查image的头，从flash中拷贝image的头到sdram，检查checksum。rtk_check_bank_image()  
+- 如果有做dual_image,会中band2_offset中读取image头，然后完成步骤一  
+- 验证成功后跳到sdram中linux的位置，启动kernel  
 
 
 
