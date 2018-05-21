@@ -3,7 +3,6 @@
 主要介绍从rtl sdk页面post的数据怎么保存到flash,以及怎么让相应服务重带的。  
 ## 前端POST请求  
 1. 以home.htm为列，修改页面中参数后，点击保存，页面会发送POST请求，如下图wireshark抓的http报文。  
-![packet](https://github.com/henerywang/usefultools/blob/master/realtek/save-data.png?raw=true) 
 * 第一个框对应的url是boa  server即将调用的保存数据的函数，home页面对应的是formWlanSetup  
 * 第二个框对应的是POST数据。这里面我们用到数据最终会存到flash中  
 
