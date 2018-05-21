@@ -1,4 +1,4 @@
-<meta http-equiv="refresh" content="10">
+[//]:<>(<meta http-equiv="refresh" content="10">)
 # rtl sdk cgi
 主要介绍从rtl sdk页面post的数据怎么保存到flash,以及怎么让相应服务重带的。  
 ## 前端POST请求  
