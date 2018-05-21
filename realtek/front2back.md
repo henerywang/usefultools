@@ -13,4 +13,5 @@
 
 ## 后台重带服务
 * 这个地方主要分析下sysconf函数，因为formRebootCheck最终会调到这里来。这里面完成了所有服务的重带工作。下图是代码流程,简要分析以下sysconf init ：  
+![dsl](https://github.com/henerywang/usefultools/blob/master/realtek/frount2back.png?raw=true)  
 
