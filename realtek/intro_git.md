@@ -27,35 +27,44 @@
 > git diff --staged `查看已暂存的将要添加到下次提交里的内容`  
 * 提交更新  
 > git commit 
-> git commit -v `提交时，把修改记录放到log中`
-> git commit -m `log放在m后面，不会启动编辑器`
-> git commit -a `跳过使用暂存区，modified文件会直接跳过git add，直接提交
+> git commit -v `提交时，把修改记录放到log中`  
+> git commit -m `log放在m后面，不会启动编辑器`  
+> git commit -a `跳过使用暂存区，modified文件会直接跳过git add，直接提交  
 * 移除文件  
-> git rm 
-> git rm -f `如果文件在暂存区，需要带上-f`
+> git rm  
+> git rm -f `如果文件在暂存区，需要带上-f`  
 * 移动文件  
 > git mv old new
 * 查看git提交历史
-> git log
-> git log -p `查看提交的改动内容`
-> git log -p 2 `查看最近两次提交的改动内容`
-> git log --pretty=oneline `这个有点复杂，可以另外写一篇来单独描述`
+> git log  
+> git log -p `查看提交的改动内容`  
+> git log -p 2 `查看最近两次提交的改动内容`  
+> git log --pretty=oneline `这个有点复杂，可以另外写一篇来单独描述`  
 * 撤消操作
-> git commit -m 'initial commit'
-> git add forgotten_file
-> git commit --amend `最终你只会有一个提交 - 第二次提交将代替第一次提交的结果`
+> git commit -m 'initial commit'  
+> git add forgotten_file  
+> git commit --amend `最终你只会有一个提交 - 第二次提交将代替第一次提交的结果`  
 * 取消暂存的文件
-> git reset staged_file
+> git reset staged_file  
 * 取消修改的文件
-> git checkout -- modified_file
+> git checkout -- modified_file  
 
 ## 3. 远程仓库使用
 * 如果clone了一个远程仓库，可以用如下命令查看仓库服务器的默认名字和对应的url  
-> git remote -v  
+> git remote -v    
 * 从远程仓库中抓取与拉取  
-> git fetch remote-name
+> git fetch remote-name  
 * 推送到远程仓库  
-> git push origin master
+> git push origin master  
 * 远程仓库的移除与重命名  
-> git remote rename old new
+> git remote rename old new  
 > git remote rm name
+
+## 4.总结
+### git工作流程
+1. 在工作目录中修改文件。  
+2. 暂存文件，将文件的快照放入暂存区域。  
+3. 提交更新，找到暂存区域的文件，将快照永久性存储到 Git 仓库目录。
+
+### 由git状态引出的工作区概念，如下图：
+![workstation](https://github.com/henerywang/usefultools/blob/master/realtek/work_station.png?raw=true) 
